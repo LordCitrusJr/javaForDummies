@@ -6,7 +6,7 @@ import static java.lang.System.out;
 public class criticalHitCheck {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in); // Turn on connection to keyboard.
-        out.println("To roll a critical hit, your roll much be the highest number of the sides of your die.");
+        out.println("To roll a critical hit, your roll must equal the highest number of the sides of your die.");
         out.print("Enter an int for the number of sides your die has: ");
 
         int inputNumber = keyboard.nextInt(); // Here's our input
