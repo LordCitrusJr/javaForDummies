@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-// This is a riff off of Dr. Burd's Elevator code from 4-5. I created a pop-up for the input.
+// This is a riff off of Dr. Burd's Elevator code from 4-5. I created a pop-up for the input and output.
 public class elevatorFitter3 {
 
     public static void main(String[] args) {
@@ -11,13 +11,11 @@ public class elevatorFitter3 {
         boolean allTenOkay = numberOfPeople >= 10;
 
         if (allTenOkay == true) { // If statement to check boolean status. IMO it's nice to have the bool var
-            System.out.print("You can fit all ten of the"); // Using print to get output on one line.
+            JOptionPane.showMessageDialog(null,"You can fit all ten of the Brickenchicker dectuplets on the elevator!");
         } else {
-            System.out.print("You can't fit all ten of the");
-
+            JOptionPane.showMessageDialog(null,"You can't fit all ten of the Brickenchicker dectuplets on the elevator!");
+            // Output boxes for the result, yeah baby!
         }
-        System.out.print(" Brickenchicker dectuplets on the elevator!");
-        System.out.println();
 
     }
 }
