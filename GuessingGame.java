@@ -28,10 +28,10 @@ public class GuessingGame {
             out.print("Try again...");
 
             if (inputNumber < randomNumber) { // updates the floor if player guesses too high
-                newFloor = inputNumber;
+                newFloor = inputNumber + 1;
                 out.println("the number is higher than your guess");
             } else { // updates the ceiling if player guesses too low
-                newCeiling = inputNumber;
+                newCeiling = inputNumber - 1;
                 out.println("the number is lower than your guess");
             }
 
