@@ -16,27 +16,11 @@ public class useFoodProduct {
         peach.foodCalories = 69;
         peach.foodServing = 1;
 
-        out.println("~Food Data~");
-        out.println("Food: " + peach.foodName);
-        out.println("Type: " + peach.foodType);
-        out.println("Price: $" + peach.foodPrice);
-        out.println("Servings Per: " + peach.foodServing);
-        out.println("Calories Per Serving: " + peach.foodCalories / peach.foodServing);
-        out.println();
-
         apple.foodName = "Apple";
         apple.foodType = "Fruit";
         apple.foodPrice = 0.69;
         apple.foodCalories = 25;
         apple.foodServing = 1;
-
-        out.println("~Food Data~");
-        out.println("Food: " + apple.foodName);
-        out.println("Type: " + apple.foodType);
-        out.println("Price: $" + apple.foodPrice);
-        out.println("Servings Per: " + apple.foodServing);
-        out.println("Calories Per Serving: " + apple.foodCalories / apple.foodServing);
-        out.println();
 
         pizza.foodName = "Pizza";
         pizza.foodType = "Pie";
@@ -44,12 +28,13 @@ public class useFoodProduct {
         pizza.foodCalories = 2400;
         pizza.foodServing = 8;
 
-        out.println("~Food Data~");
-        out.println("Food: " + pizza.foodName);
-        out.println("Type: " + pizza.foodType);
-        out.println("Price: $" + pizza.foodPrice);
-        out.println("Servings Per: " + pizza.foodServing);
-        out.println("Calories Per Serving: " + pizza.foodCalories / pizza.foodServing);
+        peach.display(); // This calls the display method and makes our code nice and neat.
         out.println();
+        apple.display();
+        out.println();
+        pizza.display();
+        out.println();
+
     }
+
 }
