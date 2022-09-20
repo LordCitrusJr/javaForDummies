@@ -1,28 +1,17 @@
 import static java.lang.System.out;
 
-public class UseOrganization {
-    public static void main(String[] args) {
-        Organization orgXYZ;
-        Organization orgABC;
+public class Organization {
+    String orgName;
+    Integer orgRevenue;
+    Boolean orgIsForProfit;
 
-        orgXYZ = new Organization();
-        orgABC = new Organization();
-        double forProfitRate = 10.00;
-        double nonProfitRate = 7.00;
+    public void display() {
+        out.print(orgName);
+        out.print(", Annual Revenue: ");
+        out.print(orgRevenue);
+        out.print(", Is a \"For Profit\" organization?: ");
+        out.print(orgIsForProfit);
 
-        orgXYZ.orgName = "Fidget Spinners Incorporated";
-        orgXYZ.orgRevenue = 1000000;
-        orgXYZ.orgIsForProfit = true;
-
-        orgABC.orgName = "Publicsense for Public Interest";
-        orgABC.orgRevenue = 575000;
-        orgABC.orgIsForProfit = false;
-
-        orgXYZ.display();
-        out.print(", Tax Liability: " + orgXYZ.taxLiability(forProfitRate));
-        out.println();
-        orgABC.display();
-        out.print(", Tax Liability: " + orgABC.taxLiability(nonProfitRate));
-        out.println();
     }
+    public double taxLiability(double taxRate) { return orgRevenue * taxRate / 100.00; } // This statement passes and returns the org's tax liability
 }
