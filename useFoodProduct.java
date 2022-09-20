@@ -32,17 +32,17 @@ public class useFoodProduct {
         pizza.foodWeight = 300;
 
         peach.display(); // This calls the display method and makes our code nice and neat.
-        out.println("Price per Gram: " + peach.priceByWeight(peach.foodPrice, peach.foodWeight));
+        out.printf("Price per Gram: $%4.2f\n", peach.priceByWeight(peach.foodPrice, peach.foodWeight));
         out.println("Calories per Serving: " + peach.caloriesPerServing(peach.foodCalories, peach.foodServing));
         out.println();
 
         apple.display();
-        out.println("Price per Gram: " + apple.priceByWeight(apple.foodPrice, apple.foodWeight));
+        out.printf("Price per Gram: $%4.2f\n", apple.priceByWeight(apple.foodPrice, apple.foodWeight));
         out.println("Calories per Serving: " + apple.caloriesPerServing(apple.foodCalories, apple.foodServing));
         out.println();
 
         pizza.display();
-        out.println("Price per Gram: " + pizza.priceByWeight(pizza.foodPrice, pizza.foodWeight));
+        out.printf("Price per Gram: $%4.2f\n", pizza.priceByWeight(pizza.foodPrice, pizza.foodWeight));
         out.println("Calories per Serving: " + pizza.caloriesPerServing(pizza.foodCalories, pizza.foodServing));
         out.println();
 
