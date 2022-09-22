@@ -10,40 +10,40 @@ public class useFoodProduct {
         apple = new foodProduct();
         pizza = new foodProduct();
 
-        peach.foodName = "Peach";
-        peach.foodType = "Fruit";
-        peach.foodPrice = 1.09;
-        peach.foodCalories = 69;
-        peach.foodServing = 1;
-        peach.foodWeight = 55;
+        peach.setFoodName("Peach");
+        peach.setFoodType("Fruit");
+        peach.setFoodPrice(1.09);
+        peach.setFoodCalories(69);
+        peach.setFoodServing(1);
+        peach.setFoodWeight(55);
 
-        apple.foodName = "Apple";
-        apple.foodType = "Fruit";
-        apple.foodPrice = 0.69;
-        apple.foodCalories = 25;
-        apple.foodServing = 1;
-        apple.foodWeight = 45;
+        apple.setFoodName("Apple");
+        apple.setFoodType("Fruit");
+        apple.setFoodPrice(0.69);
+        apple.setFoodCalories(25);
+        apple.setFoodServing(1);
+        apple.setFoodWeight(45);
 
-        pizza.foodName = "Pizza";
-        pizza.foodType = "Pie";
-        pizza.foodPrice = 5.99;
-        pizza.foodCalories = 2400;
-        pizza.foodServing = 8;
-        pizza.foodWeight = 300;
+        pizza.setFoodName("Pizza");
+        pizza.setFoodType("Pie");
+        pizza.setFoodPrice(5.99);
+        pizza.setFoodCalories(2400);
+        pizza.setFoodServing(8);
+        pizza.setFoodWeight(300);
 
         peach.display(); // This calls the display method and makes our code nice and neat.
-        out.printf("Price per Gram: $%4.2f\n", peach.priceByWeight(peach.foodPrice, peach.foodWeight));
-        out.println("Calories per Serving: " + peach.caloriesPerServing(peach.foodCalories, peach.foodServing));
+        out.printf("Price per Gram: $%4.2f\n", peach.priceByWeight(peach.getFoodPrice(), peach.getFoodWeight()));
+        out.println("Calories per Serving: " + peach.caloriesPerServing(peach.getFoodCalories(), peach.getFoodServing()));
         out.println();
 
         apple.display();
-        out.printf("Price per Gram: $%4.2f\n", apple.priceByWeight(apple.foodPrice, apple.foodWeight));
-        out.println("Calories per Serving: " + apple.caloriesPerServing(apple.foodCalories, apple.foodServing));
+        out.printf("Price per Gram: $%4.2f\n", apple.priceByWeight(apple.getFoodPrice(), apple.getFoodWeight()));
+        out.println("Calories per Serving: " + apple.caloriesPerServing(apple.getFoodCalories(), apple.getFoodServing()));
         out.println();
 
         pizza.display();
-        out.printf("Price per Gram: $%4.2f\n", pizza.priceByWeight(pizza.foodPrice, pizza.foodWeight));
-        out.println("Calories per Serving: " + pizza.caloriesPerServing(pizza.foodCalories, pizza.foodServing));
+        out.printf("Price per Gram: $%4.2f\n", pizza.priceByWeight(pizza.getFoodPrice(), pizza.getFoodWeight()));
+        out.println("Calories per Serving: " + pizza.caloriesPerServing(pizza.getFoodCalories(), pizza.getFoodServing()));
         out.println();
 
     }
