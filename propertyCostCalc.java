@@ -20,6 +20,6 @@ public class propertyCostCalc {
         myPlace.setSqfPrice(keyboard.nextDouble());
 
         out.println("Property at " + myPlace.getAddress() + "(with " + myPlace.getNumBedrooms() + " bedrooms) has a property cost of ");
-        out.printf("$%4.2f%n", myPlace.getSqFeet() * myPlace.getSqfPrice());
+        out.printf("$%,.2f%n", myPlace.getSqFeet() * myPlace.getSqfPrice());
     }
 }
