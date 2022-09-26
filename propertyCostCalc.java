@@ -1,7 +1,7 @@
 import static java.lang.System.out;
 import java.util.Scanner;
 
-public class propertyCostCalc {
+public class DtpTextVersion {
     public static void main(String[] args) {
         var keyboard = new Scanner(System.in);
         PlaceToLive myPlace = new PlaceToLive();
@@ -19,7 +19,14 @@ public class propertyCostCalc {
         out.println("Please enter the neighborhood's estimated cost per square foot (i.e 5.50): ");
         myPlace.setSqfPrice(keyboard.nextDouble());
 
-        out.println("Property at " + myPlace.getAddress() + "(with " + myPlace.getNumBedrooms() + " bedrooms) has a property cost of ");
-        out.printf("$%,.2f%n", myPlace.getSqFeet() * myPlace.getSqfPrice());
+        myPlace.setEstPropCost(myPlace.getSqFeet() * myPlace.getSqfPrice());
+        myPlace.setCostPerBedroom(myPlace.getEstPropCost() / myPlace.getSqFeet());
+
+        out.print("Property at " + myPlace.getAddress() + " (with " + myPlace.getNumBedrooms() + " bedrooms) has an " +
+                "estimated property cost of ");
+        out.printf("$%,.2f%n", myPlace.getEstPropCost());
+        out.println();
+        out.print("The cost per bedroom is ");
+        out.printf("$%,.2f%n", myPlace.getCostPerBedroom());
     }
 }
